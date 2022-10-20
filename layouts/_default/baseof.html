@@ -2,11 +2,12 @@
 <html lang="{{ $.Site.Language }}">
 <head>
   {{ block "title" . }}
-    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ else }}{{ .Title }} - {{ $.Site.Title }}{{ end }}</title>
   {{ end }}
+  {{ partial "analytics.html" . }}
   {{ partial "head.html" . }}
 </head>
-<body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
+<body>
 <div class="container">
   {{ partial "header.html" . }}
 

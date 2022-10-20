@@ -1,7 +1,18 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+
   padding: 40px 20px;
   flex-grow: 0;
-  color: var(--light-color-secondary);
+  color: var(--theme-color-secondary);
+
+  /* TODO: FIX tablet footer height */
+  @media (--tablet) {
+    height: 150px;
+  }
 
   &__inner {
     display: flex;
@@ -25,7 +36,7 @@
     flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    color: var(--light-color-secondary);
+    color: var(--theme-color-secondary);
 
     &--user {
       margin: auto;
