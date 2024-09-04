@@ -247,3 +247,17 @@ hr {
 .hidden {
   display: none;
 }
+
+.workedfor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.workedforitem {
+  margin: 10px;
+  align-self: center;
+  & img {
+    width: 150px;
+  }
+}

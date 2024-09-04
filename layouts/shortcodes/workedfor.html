@@ -1,0 +1,9 @@
+{{ with .Site.Params.workedfor }}
+<div class="workedfor">
+    {{ range . }}
+        <a class="workedforitem" {{ with .link }}href="{{.}}"{{ end }}>
+            <img src="{{ .image }}" title="{{ .tooltip }}" target="_blank" rel="me"/>
+        </a>
+    {{ end }}
+</div>
+{{end}}
