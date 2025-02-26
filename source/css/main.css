@@ -259,5 +259,8 @@ hr {
   align-self: center;
   & img {
     width: 150px;
+    @media (prefers-color-scheme: dark) {
+      filter: invert();
+    }
   }
 }
